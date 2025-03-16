@@ -115,17 +115,15 @@ void tasks(struct footballTeams *teams, int count){
         system("cls");
         fflush(stdin);
         printf("What you want to do:\n");
-        printf("1. Find high byte of the num\n");
-        printf("2. Input and output struct\n");
-        printf("3. Find teams with more than a given number of wins.\n");
-        printf("4.Delete commands with the given name.");
+        printf("1. Input and output struct\n");
+        printf("2. Find teams with more than a given number of wins.\n");
+        printf("3. Delete commands with the given name.\n");
         setNumber(&ans);
         getchar();
         switch(ans) {
-            case 1:findHighByte(); break;
-            case 2:inputStruct(teams); outputStruct( *teams);break;
-            case 3:findTeams(teams, count); break;
-            case 4:deleteTeams(teams, &count); break;
+            case 1:inputStruct(teams); outputStruct( *teams);break;
+            case 2:findTeams(teams, count); break;
+            case 3:deleteTeams(teams, &count); break;
             default: puts("Task number must be from 1 to 4!"); break;
         }
         puts("Do you want to try again?(y/n)");
