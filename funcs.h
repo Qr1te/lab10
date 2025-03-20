@@ -10,6 +10,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "struct.h"
+
 void setNumber(int* number);
 char Try_answer();
 void findHighByte();

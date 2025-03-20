@@ -6,6 +6,13 @@
 #define LAB10_STRUCT_H
 
 #endif //LAB10_STRUCT_H
+union num{
+    int number;
+    struct {
+        unsigned int b1 :24;
+        unsigned int b2 :8;
+    }byte;
+};
 
 struct year{
     char Year[4];

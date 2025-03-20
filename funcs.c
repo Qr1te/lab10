@@ -53,12 +53,10 @@ char *readLine() {
 }
 
 void findHighByte(){
-    int num;
+    union num number;
     printf("Enter the number: ");
-    setNumber(&num);
-    printf("%d\n", num);
-    unsigned int highByte = num >> 24;
-    printf("Higher byte = %d\n", highByte);
+    setNumber(&number.number);
+    printf("Higher byte = %d\n",number.byte.b2 );
 }
 void inputStruct(struct footballTeams *team){
     printf("Enter count of team wins\n");
@@ -91,7 +89,7 @@ void deleteTeams(struct footballTeams *teams, int *count){
     for(int i = 0; i < *count; i++){
         inputStruct(&teams[i]);
     }
-    printf("Enter team name to delete ");
+    printf("Enter team name to delete");
     char *name = readLine();
     for(int i = 0; i < *count; i++){
         if(strcmp(teams[i].name, name) == 0){
